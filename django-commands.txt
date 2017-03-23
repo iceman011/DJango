@@ -1,0 +1,24 @@
+- you need to edit settings.py and add to it codenvy server ip
+django-admin startproject helloproject
+python manage.py runserver 0.0.0.0:8080
+python manage.py startapp pollsapp
+python manage.py migrate
+python manage.py makemigrations pollsapp
+python manage.py sqlmigrate pollsapp 0001
+python manage.py migrate
+python manage.py shell
+
+from pollsapp.models import Question, Choice
+
+modelXXX.objects.all()
+modelXXX.objects.filter(id=1)
+modelXXX.objects.filter(columnXXX__startswith='What')
+modelXXX.objects.get(columnXXX__year=timezone.now().year
+q = Question.objects.get(pk=1)
+
+python manage.py createsuperuser
+admin= adminpass123
+
+-for sqlite3 malformed diskimage
+--http://askubuntu.com/questions/30185/banshee-encountered-a-fatal-error-sqlite-error-11-database-disk-image-is-malfo
+
