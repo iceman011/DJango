@@ -2,7 +2,9 @@ from django.conf.urls import url
 
 from . import views
 
+app_name = 'pollsapp'
 urlpatterns = [
+  # the 'name' value as called by the {% url %} template tag  
     url(r'^$', views.index, name='index'),
     
     # ex: /polls/5/
